@@ -1,19 +1,29 @@
 @import "tailwindcss";
 
+/* Paleta institucional akrono (Manual de marca V2) */
 :root {
-  --clay: #c0512f;
-  --clay-dark: #9c3f22;
-  --ochre: #d99a2b;
-  --ink: #241a14;
-  --cream: #fbf7f1;
-  --sage: #3b7a63;
+  --navy: #152258;   /* institucional principal */
+  --violet: #4e11a3;
+  --ochre: #ef9305;
+  --magenta: #da004a;
+  --cyan: #39bed8;
+  /* roles semánticos usados en la UI */
+  --clay: #da004a;        /* acción/acento (botones, precios) = magenta */
+  --clay-dark: #b0003b;
+  --ink: #152258;         /* texto/oscuro = navy */
+  --cream: #f6f7fb;       /* fondo claro */
+  --sage: #2496b0;        /* éxito/stock = cian legible */
   --paper: #ffffff;
-  --line: #ece3d7;
+  --line: #e5e7f0;
 }
 
 @theme inline {
-  --color-clay: var(--clay);
+  --color-navy: var(--navy);
+  --color-violet: var(--violet);
   --color-ochre: var(--ochre);
+  --color-magenta: var(--magenta);
+  --color-cyan: var(--cyan);
+  --color-clay: var(--clay);
   --color-ink: var(--ink);
   --color-cream: var(--cream);
   --color-sage: var(--sage);
@@ -33,7 +43,7 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* utilidades de marca */

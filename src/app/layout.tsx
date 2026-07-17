@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { MuseoModerno, Poppins } from "next/font/google";
 import "./globals.css";
 
-const display = Fraunces({
+// Tipografías de marca akrono: MuseoModerno (títulos/logo) + Poppins (cuerpo)
+const display = MuseoModerno({
   subsets: ["latin"],
   variable: "--font-display",
   weight: ["400", "500", "600", "700"],
 });
-const sans = Manrope({
+const sans = Poppins({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {

@@ -3,15 +3,16 @@ import { getProduct } from "@/lib/catalog";
 // Genera una imagen SVG de marca para cada producto (sin fotos externas).
 // Gradiente y motivo según la categoría — consistente y siempre disponible.
 
+// Combinaciones cromáticas akrono (navy/violeta/ocre/magenta/cian)
 const CAT_COLORS: Record<string, [string, string]> = {
-  "tejidos-crochet": ["#C0512F", "#D99A2B"],
-  "ceramica-artesanal": ["#3B7A63", "#8FB9A8"],
-  "joyeria-artesanal": ["#7A5C9E", "#D99A2B"],
-  "papeleria-libretas": ["#2E6B8A", "#8FB9A8"],
-  "textiles-bordados": ["#B23A48", "#D99A2B"],
-  "decoracion-hogar": ["#C0512F", "#3B7A63"],
-  "accesorios-cuero": ["#6B4423", "#C0512F"],
-  "arte-madera": ["#7A5230", "#D99A2B"],
+  "tejidos-crochet": ["#4E11A3", "#DA004A"],
+  "ceramica-artesanal": ["#152258", "#39BED8"],
+  "joyeria-artesanal": ["#4E11A3", "#39BED8"],
+  "papeleria-libretas": ["#152258", "#4E11A3"],
+  "textiles-bordados": ["#DA004A", "#EF9305"],
+  "decoracion-hogar": ["#39BED8", "#152258"],
+  "accesorios-cuero": ["#152258", "#EF9305"],
+  "arte-madera": ["#4E11A3", "#EF9305"],
 };
 
 function motif(cat: string, c: string): string {
@@ -37,7 +38,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ slug: string }
   const { slug } = await ctx.params;
   const p = getProduct(slug);
   const cat = p?.category || "";
-  const [a, b] = CAT_COLORS[cat] || ["#C0512F", "#D99A2B"];
+  const [a, b] = CAT_COLORS[cat] || ["#152258", "#DA004A"];
   const initials = (p?.name_es || "akrono")
     .split(" ")
     .filter((w) => w.length > 2)
@@ -57,7 +58,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ slug: string }
   <rect width="800" height="800" fill="url(#g)"/>
   <rect width="800" height="800" fill="url(#p)"/>
   <rect x="60" y="60" width="680" height="680" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2" rx="18"/>
-  <text x="400" y="420" font-family="Georgia, serif" font-size="150" font-weight="700" fill="#ffffff" fill-opacity=".92" text-anchor="middle">${initials}</text>
+  <text x="400" y="420" font-family="ui-sans-serif, system-ui, sans-serif" font-size="150" font-weight="700" fill="#ffffff" fill-opacity=".92" text-anchor="middle">${initials}</text>
   <text x="400" y="700" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" letter-spacing="3" fill="#ffffff" fill-opacity=".85" text-anchor="middle">akrono · handmade</text>
 </svg>`;
 
