@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --clay: #c0512f;
+  --clay-dark: #9c3f22;
+  --ochre: #d99a2b;
+  --ink: #241a14;
+  --cream: #fbf7f1;
+  --sage: #3b7a63;
+  --paper: #ffffff;
+  --line: #ece3d7;
+}
+
+@theme inline {
+  --color-clay: var(--clay);
+  --color-ochre: var(--ochre);
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --color-sage: var(--sage);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* utilidades de marca */
+.btn-primary {
+  background: var(--clay);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  transition: background 0.15s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-primary:hover {
+  background: var(--clay-dark);
+}
+.btn-primary:active {
+  transform: translateY(1px);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-ghost {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  background: #fff;
+  transition: border-color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-ghost:hover {
+  border-color: var(--clay);
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.field {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  background: #fff;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.field:focus {
+  outline: 2px solid var(--clay);
+  outline-offset: -1px;
+}
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b5d50;
+  margin-bottom: 0.25rem;
+  display: block;
+}
