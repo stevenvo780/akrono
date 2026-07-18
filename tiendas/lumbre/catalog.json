@@ -1,0 +1,299 @@
+{
+  "categories": [
+    {
+      "slug": "velas-aromaticas",
+      "name_es": "Velas Aromáticas",
+      "name_en": "Scented Candles",
+      "description_es": "Velas artesanales de cera de soya con fragancias naturales e intensas, hechas a mano en Medellín.",
+      "description_en": "Handcrafted soy wax candles with natural and intense fragrances, made by hand in Medellín."
+    },
+    {
+      "slug": "difusores",
+      "name_es": "Difusores",
+      "name_en": "Diffusers",
+      "description_es": "Difusores de caña con aromas persistentes que transforman cualquier espacio.",
+      "description_en": "Reed diffusers with long-lasting aromas that transform any space."
+    },
+    {
+      "slug": "ceras-para-derretir",
+      "name_es": "Ceras para Derretir",
+      "name_en": "Wax Melts",
+      "description_es": "Ceras sin llama para derretir en quemadores, con fragancias delicadas y duraderas.",
+      "description_en": "Flameless wax melts for burners, with delicate and long-lasting fragrances."
+    },
+    {
+      "slug": "kits-regalo",
+      "name_es": "Kits de Regalo",
+      "name_en": "Gift Sets",
+      "description_es": "Combinaciones especiales de productos Lumbre, perfectas para obsequiar.",
+      "description_en": "Special combinations of Lumbre products, perfect for gifting."
+    }
+  ],
+  "products": [
+    {
+      "slug": "vela-cafe-cardamomo",
+      "name_es": "Vela Café y Cardamomo",
+      "name_en": "Coffee & Cardamom Candle",
+      "category": "velas-aromaticas",
+      "description_es": "Una vela que despierta con aromas intensos de café tostado y cardamomo, ideal para las mañanas.",
+      "description_en": "A candle that awakens with intense aromas of roasted coffee and cardamom, ideal for mornings.",
+      "story_es": "Inspirada en los cafés tradicionales colombianos, esta vela nace de una mezcla de café del Huila con cardamomo. Cada vela se vierte a mano en cera de soya 100% pura.",
+      "story_en": "Inspired by traditional Colombian coffee shops, this candle blends Huila coffee with cardamom. Each candle is hand-poured in 100% pure soy wax.",
+      "price_cop": 85000,
+      "price_usd": 21,
+      "stock": 12,
+      "production_time_days": 3,
+      "materials_es": [
+        "Cera de soya",
+        "esencias naturales de café y cardamomo",
+        "pabilo de madera"
+      ],
+      "materials_en": [
+        "Soy wax",
+        "natural coffee and cardamom essences",
+        "wooden wick"
+      ],
+      "weight_grams": 250,
+      "featured": true
+    },
+    {
+      "slug": "vela-madera-sandalo",
+      "name_es": "Vela Madera de Sándalo",
+      "name_en": "Sandalwood Candle",
+      "category": "velas-aromaticas",
+      "description_es": "Aroma cálido y envolvente que evoca maderas nobles y resinas exóticas del Oriente.",
+      "description_en": "Warm and enveloping aroma that evokes noble woods and exotic resins from the East.",
+      "story_es": "Sándalo auténtico mezclado con trazas de ámbar y cedro. Una creación que transporta al lujo de lo artesanal.",
+      "story_en": "Authentic sandalwood blended with hints of amber and cedar. A creation that transports to the luxury of handcraft.",
+      "price_cop": 95000,
+      "price_usd": 24,
+      "stock": 8,
+      "production_time_days": 4,
+      "materials_es": [
+        "Cera de soya",
+        "esencias de sándalo y ámbar",
+        "pabilo de algodón"
+      ],
+      "materials_en": [
+        "Soy wax",
+        "sandalwood and amber essences",
+        "cotton wick"
+      ],
+      "weight_grams": 280,
+      "featured": false
+    },
+    {
+      "slug": "vela-citricos-andes",
+      "name_es": "Vela Cítricos de los Andes",
+      "name_en": "Andean Citrus Candle",
+      "category": "velas-aromaticas",
+      "description_es": "Frescura radiante de naranjas, limones y toronjas cultivados en los páramos colombianos.",
+      "description_en": "Radiant freshness of oranges, lemons and grapefruits grown in Colombian highlands.",
+      "story_es": "Cada vela captura la esencia de los frutales andinos al amanecer, con cítricos prensados en frío de Nariño.",
+      "story_en": "Each candle captures the essence of Andean fruit trees at dawn, with cold-pressed citrus from Nariño.",
+      "price_cop": 85000,
+      "price_usd": 21,
+      "stock": 15,
+      "production_time_days": 2,
+      "materials_es": [
+        "Cera de soya",
+        "aceites de cítricos prensados en frío",
+        "pabilo de madera"
+      ],
+      "materials_en": [
+        "Soy wax",
+        "cold-pressed citrus oils",
+        "wooden wick"
+      ],
+      "weight_grams": 250,
+      "featured": true
+    },
+    {
+      "slug": "vela-vainilla-tabaco",
+      "name_es": "Vela Vainilla y Tabaco",
+      "name_en": "Vanilla & Tobacco Candle",
+      "category": "velas-aromaticas",
+      "description_es": "Contraste sofisticado entre la suavidad de la vainilla y la profundidad del tabaco curado.",
+      "description_en": "Sophisticated contrast between vanilla softness and the depth of aged tobacco.",
+      "story_es": "Homenaje a los tabacos de Santa Marta y la vainilla del Cauca. Evoca tardes en terrazas coloniales.",
+      "story_en": "Tribute to Santa Marta tobacco and Cauca vanilla. Evokes evenings on colonial terraces.",
+      "price_cop": 105000,
+      "price_usd": 26,
+      "stock": 10,
+      "production_time_days": 5,
+      "materials_es": [
+        "Cera de soya",
+        "esencias de vainilla y tabaco curado",
+        "pabilo de madera"
+      ],
+      "materials_en": [
+        "Soy wax",
+        "vanilla and aged tobacco essences",
+        "wooden wick"
+      ],
+      "weight_grams": 300,
+      "featured": false
+    },
+    {
+      "slug": "difusor-eucalipto-puro",
+      "name_es": "Difusor Eucalipto Puro",
+      "name_en": "Pure Eucalyptus Diffuser",
+      "category": "difusores",
+      "description_es": "Respirabilidad y frescura pura que despejan la mente y purifican el aire.",
+      "description_en": "Pure breathability and freshness that clears the mind and purifies the air.",
+      "story_es": "Eucalipto de las montañas del Valle del Cauca, destilado artesanalmente. Ideal para espacios de trabajo y descanso.",
+      "story_en": "Eucalyptus from the mountains of Valle del Cauca, artisanally distilled. Ideal for work and rest spaces.",
+      "price_cop": 65000,
+      "price_usd": 16,
+      "stock": 20,
+      "production_time_days": 1,
+      "materials_es": [
+        "Aceite esencial de eucalipto",
+        "varas de rattan natural",
+        "frasco de vidrio"
+      ],
+      "materials_en": [
+        "Eucalyptus essential oil",
+        "natural rattan reeds",
+        "glass bottle"
+      ],
+      "weight_grams": 180,
+      "featured": false
+    },
+    {
+      "slug": "difusor-rosa-azafran",
+      "name_es": "Difusor Rosa y Azafrán",
+      "name_en": "Rose & Saffron Diffuser",
+      "category": "difusores",
+      "description_es": "Elegancia floral con toques de especias cálidas, una combinación de lujo y confort.",
+      "description_en": "Floral elegance with warm spice notes, a combination of luxury and comfort.",
+      "story_es": "Rosas silvestres de Bogotá y azafrán en una creación delicada, macerada durante semanas.",
+      "story_en": "Wild roses from Bogotá and saffron in a delicate creation, macerated for weeks.",
+      "price_cop": 75000,
+      "price_usd": 19,
+      "stock": 14,
+      "production_time_days": 2,
+      "materials_es": [
+        "Aceites florales de rosa",
+        "azafrán",
+        "varas de rattan",
+        "frasco de vidrio"
+      ],
+      "materials_en": [
+        "Rose and saffron floral oils",
+        "rattan reeds",
+        "glass bottle"
+      ],
+      "weight_grams": 200,
+      "featured": true
+    },
+    {
+      "slug": "wax-melts-bosque-colombiano",
+      "name_es": "Wax Melts Bosque Colombiano",
+      "name_en": "Colombian Forest Wax Melts",
+      "category": "ceras-para-derretir",
+      "description_es": "Aroma selvático con musgo, tierra húmeda y flores silvestres del Pacífico colombiano.",
+      "description_en": "Jungle aroma with moss, wet earth and wildflowers from the Colombian Pacific.",
+      "story_es": "Inspirados en la selva chocoana, capturan la esencia de la biodiversidad en cera virgen.",
+      "story_en": "Inspired by the Chocó rainforest, they capture the essence of biodiversity in pure wax.",
+      "price_cop": 45000,
+      "price_usd": 11,
+      "stock": 25,
+      "production_time_days": 1,
+      "materials_es": [
+        "Cera de soya",
+        "esencias de musgo",
+        "tierra y flores silvestres"
+      ],
+      "materials_en": [
+        "Soy wax",
+        "moss",
+        "earth and wildflower essences"
+      ],
+      "weight_grams": 150,
+      "featured": false
+    },
+    {
+      "slug": "wax-melts-flor-cayena",
+      "name_es": "Wax Melts Flor de Cayena",
+      "name_en": "Cayenne Flower Wax Melts",
+      "category": "ceras-para-derretir",
+      "description_es": "Aroma tropical y sensual que mezcla flores ecuatoriales con toques especiados.",
+      "description_en": "Tropical and sensual aroma that blends equatorial flowers with spiced notes.",
+      "story_es": "La flor de cayena perfuma los jardines caleños. Estos melts honran esa belleza tropical.",
+      "story_en": "Cayenne flower perfumes Cali gardens. These melts honor that tropical beauty.",
+      "price_cop": 48000,
+      "price_usd": 12,
+      "stock": 22,
+      "production_time_days": 1,
+      "materials_es": [
+        "Cera de soya",
+        "esencias de flor de cayena y especias tropicales"
+      ],
+      "materials_en": [
+        "Soy wax",
+        "cayenne flower and tropical spice essences"
+      ],
+      "weight_grams": 160,
+      "featured": false
+    },
+    {
+      "slug": "kit-regalo-aromas-suaves",
+      "name_es": "Kit Regalo Aromas Suaves",
+      "name_en": "Soft Aromas Gift Set",
+      "category": "kits-regalo",
+      "description_es": "Combinación perfecta para iniciarse en Lumbre: una vela, un difusor y wax melts seleccionados.",
+      "description_en": "Perfect combination to enter Lumbre: a candle, a diffuser and selected wax melts.",
+      "story_es": "Reúne nuestros aromas más versátiles: Cítricos de los Andes, Eucalipto Puro y Bosque Colombiano.",
+      "story_en": "Brings together our most versatile aromas: Andean Citrus, Pure Eucalyptus and Colombian Forest.",
+      "price_cop": 160000,
+      "price_usd": 40,
+      "stock": 6,
+      "production_time_days": 3,
+      "materials_es": [
+        "Cera de soya",
+        "aceites esenciales",
+        "varas de rattan",
+        "caja de cartón reciclado"
+      ],
+      "materials_en": [
+        "Soy wax",
+        "essential oils",
+        "rattan reeds",
+        "recycled cardboard box"
+      ],
+      "weight_grams": 600,
+      "featured": true
+    },
+    {
+      "slug": "kit-regalo-premium-lumbre",
+      "name_es": "Kit Regalo Premium Lumbre",
+      "name_en": "Lumbre Premium Gift Set",
+      "category": "kits-regalo",
+      "description_es": "Las fragancias signature de Lumbre reunidas en una caja de presentación elevada.",
+      "description_en": "Lumbre's signature fragrances gathered in an elevated presentation box.",
+      "story_es": "Para quienes aman lo mejor: Vainilla y Tabaco, Rosa y Azafrán, y Flor de Cayena, en empaque artesanal.",
+      "story_en": "For those who love the best: Vanilla & Tobacco, Rose & Saffron, and Cayenne Flower, in artisanal packaging.",
+      "price_cop": 145000,
+      "price_usd": 36,
+      "stock": 5,
+      "production_time_days": 4,
+      "materials_es": [
+        "Cera de soya",
+        "aceites esenciales premium",
+        "varas de rattan",
+        "papel de algodón",
+        "cinta de seda"
+      ],
+      "materials_en": [
+        "Premium soy wax",
+        "premium essential oils",
+        "rattan reeds",
+        "cotton paper",
+        "silk ribbon"
+      ],
+      "weight_grams": 550,
+      "featured": false
+    }
+  ]
+}

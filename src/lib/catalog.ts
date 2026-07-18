@@ -1,31 +1,38 @@
-import catalogData from "../../data/catalog.json";
+// Acceso al catálogo por tienda (server-only). Lee de la BD multi-tienda.
+// El catálogo es editable en vivo vía API/MCP; estas funciones reflejan la BD.
+
+import { listProducts, listCategories, getProduct as dbGetProduct } from "./store";
 import type { Category, Product } from "./types";
 
-const data = catalogData as { categories: Category[]; products: Product[] };
-
-export const categories: Category[] = data.categories;
-export const products: Product[] = data.products;
-
-export function getProduct(slug: string): Product | undefined {
-  return products.find((p) => p.slug === slug);
+export function getProducts(storeSlug: string): Product[] {
+  return listProducts(storeSlug);
 }
 
-export function getCategory(slug: string): Category | undefined {
-  return categories.find((c) => c.slug === slug);
+export function getCategories(storeSlug: string): Category[] {
+  return listCategories(storeSlug);
 }
 
-export function productsByCategory(slug: string): Product[] {
-  return products.filter((p) => p.category === slug);
+export function getProduct(storeSlug: string, slug: string): Product | undefined {
+  return dbGetProduct(storeSlug, slug);
 }
 
-export function featuredProducts(): Product[] {
-  return products.filter((p) => p.featured);
+export function getCategory(storeSlug: string, slug: string): Category | undefined {
+  return listCategories(storeSlug).find((c) => c.slug === slug);
 }
 
-export function searchProducts(q: string): Product[] {
+export function productsByCategory(storeSlug: string, categorySlug: string): Product[] {
+  return listProducts(storeSlug).filter((p) => p.category === categorySlug);
+}
+
+export function featuredProducts(storeSlug: string): Product[] {
+  return listProducts(storeSlug).filter((p) => p.featured);
+}
+
+export function searchProducts(storeSlug: string, q: string): Product[] {
   const term = q.trim().toLowerCase();
-  if (!term) return products;
-  return products.filter((p) =>
+  const all = listProducts(storeSlug);
+  if (!term) return all;
+  return all.filter((p) =>
     [p.name_es, p.name_en, p.description_es, p.description_en, p.category]
       .join(" ")
       .toLowerCase()

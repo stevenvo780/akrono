@@ -1,9 +1,9 @@
 import { test, expect, request as pwRequest } from "@playwright/test";
 
-// Crea un pedido internacional vía API para tener datos en el panel.
-async function seedOrder(baseURL: string): Promise<string> {
+// Crea un pedido en una tienda vía API para tener datos en el panel.
+async function seedOrder(baseURL: string, store: string): Promise<string> {
   const ctx = await pwRequest.newContext({ baseURL });
-  const res = await ctx.post("/api/orders", {
+  const res = await ctx.post(`/api/orders?store=${store}`, {
     data: {
       currency: "USD",
       scope: "internacional",
@@ -23,26 +23,24 @@ async function seedOrder(baseURL: string): Promise<string> {
 
 test.describe("Panel de administración — gestión completa", () => {
   test("login incorrecto es rechazado", async ({ page }) => {
-    await page.goto("/admin");
+    await page.goto("/akrono/admin");
     await page.locator('input[type="password"]').fill("clave-mala");
     await page.getByRole("button", { name: /Entrar/i }).click();
     await expect(page.getByText(/Contraseña incorrecta/i)).toBeVisible();
   });
 
   test("login → pedido → confirmar pago → enviar → envío en distribución", async ({ page, baseURL }) => {
-    const orderId = await seedOrder(baseURL!);
+    const orderId = await seedOrder(baseURL!, "akrono");
+    expect(orderId).toMatch(/^AKR-\d+$/);
 
-    // login
-    await page.goto("/admin");
+    await page.goto("/akrono/admin");
     await page.locator('input[type="password"]').fill("akrono2026");
     await page.getByRole("button", { name: /Entrar/i }).click();
     await expect(page.getByRole("heading", { name: /Panel de gestión/i })).toBeVisible();
 
-    // pedidos
-    await page.goto("/admin/pedidos");
+    await page.goto("/akrono/admin/pedidos");
     await expect(page.getByText(orderId)).toBeVisible();
 
-    // expandir el pedido y confirmar pago (contraentrega arranca pendiente)
     await page.getByRole("button", { name: new RegExp(orderId) }).click();
     const confirmar = page.getByRole("button", { name: /Confirmar pago/i });
     if (await confirmar.count()) {
@@ -50,19 +48,17 @@ test.describe("Panel de administración — gestión completa", () => {
       await expect(page.getByText(orderId)).toBeVisible();
     }
 
-    // cambiar estado a Enviado (crea envío automático)
     const row = page.locator(".card", { hasText: orderId }).first();
     await row.locator("select").first().selectOption("enviado");
     await page.waitForTimeout(600);
 
-    // distribución: debe existir un envío
-    await page.goto("/admin/distribucion");
+    await page.goto("/akrono/admin/distribucion");
     await expect(page.getByRole("heading", { name: /Distribución/i })).toBeVisible();
     await expect(page.getByText(new RegExp(orderId))).toBeVisible();
   });
 
   test("analítica del panel visible", async ({ page }) => {
-    await page.goto("/admin");
+    await page.goto("/akrono/admin");
     await page.locator('input[type="password"]').fill("akrono2026");
     await page.getByRole("button", { name: /Entrar/i }).click();
     await expect(page.getByText(/Ingresos últimos 14 días/i)).toBeVisible();

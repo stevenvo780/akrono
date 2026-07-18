@@ -1,13 +1,15 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useStoreSlug } from "@/lib/store-context";
 import type { Product, ProductState, ProductionStatus } from "@/lib/types";
 
 export default function ProductionCard({ product, state }: { product: Product; state: ProductState }) {
   const router = useRouter();
+  const store = useStoreSlug();
 
   async function set(status: ProductionStatus) {
-    await fetch(`/api/products/${product.slug}`, {
+    await fetch(`/api/products/${product.slug}?store=${store}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ production_status: status }),

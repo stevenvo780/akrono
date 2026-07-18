@@ -1,4 +1,6 @@
 import { getProduct } from "@/lib/catalog";
+import { getStore } from "@/lib/store";
+import { store as defaultStore } from "@/lib/tenant";
 
 // Genera una imagen SVG de marca para cada producto (sin fotos externas).
 // Gradiente y motivo según la categoría — consistente y siempre disponible.
@@ -34,12 +36,16 @@ function motif(cat: string, c: string): string {
   }
 }
 
-export async function GET(_req: Request, ctx: { params: Promise<{ slug: string }> }) {
+export async function GET(req: Request, ctx: { params: Promise<{ slug: string }> }) {
   const { slug } = await ctx.params;
-  const p = getProduct(slug);
+  const storeSlug = new URL(req.url).searchParams.get("store") || defaultStore.slug;
+  const cfg = getStore(storeSlug);
+  const p = getProduct(storeSlug, slug);
   const cat = p?.category || "";
-  const [a, b] = CAT_COLORS[cat] || ["#152258", "#DA004A"];
-  const initials = (p?.name_es || "akrono")
+  const brandColors: [string, string] = cfg ? [cfg.colors.ink, cfg.colors.primary] : ["#152258", "#DA004A"];
+  const [a, b] = CAT_COLORS[cat] || brandColors;
+  const footer = `${cfg?.name || defaultStore.name} · handmade`;
+  const initials = (p?.name_es || cfg?.name || "akrono")
     .split(" ")
     .filter((w) => w.length > 2)
     .slice(0, 2)
@@ -59,7 +65,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ slug: string }
   <rect width="800" height="800" fill="url(#p)"/>
   <rect x="60" y="60" width="680" height="680" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2" rx="18"/>
   <text x="400" y="420" font-family="ui-sans-serif, system-ui, sans-serif" font-size="150" font-weight="700" fill="#ffffff" fill-opacity=".92" text-anchor="middle">${initials}</text>
-  <text x="400" y="700" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" letter-spacing="3" fill="#ffffff" fill-opacity=".85" text-anchor="middle">akrono · handmade</text>
+  <text x="400" y="700" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" letter-spacing="3" fill="#ffffff" fill-opacity=".85" text-anchor="middle">${footer}</text>
 </svg>`;
 
   return new Response(svg, {

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useStoreSlug } from "@/lib/store-context";
 import type { Order, OrderStatus } from "@/lib/types";
 import { money } from "@/lib/format";
 
@@ -26,12 +27,13 @@ const LABEL: Record<OrderStatus, string> = {
 
 export default function OrderRow({ order }: { order: Order }) {
   const router = useRouter();
+  const store = useStoreSlug();
   const [open, setOpen] = useState(false);
   const [saving, setSaving] = useState(false);
 
   async function change(status: OrderStatus) {
     setSaving(true);
-    await fetch(`/api/orders/${order.id}`, {
+    await fetch(`/api/orders/${order.id}?store=${store}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ status }),
@@ -42,7 +44,7 @@ export default function OrderRow({ order }: { order: Order }) {
 
   async function confirmPayment() {
     setSaving(true);
-    await fetch(`/api/orders/${order.id}`, {
+    await fetch(`/api/orders/${order.id}?store=${store}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ payment_status: "pagado" }),

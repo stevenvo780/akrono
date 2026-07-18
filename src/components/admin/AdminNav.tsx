@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/StoreLink";
 import { usePathname, useRouter } from "next/navigation";
 import { Logo } from "@/lib/brand";
 

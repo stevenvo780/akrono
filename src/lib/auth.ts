@@ -1,6 +1,7 @@
 import crypto from "crypto";
 import { cookies } from "next/headers";
 
+// Admin único de la plataforma (Isa gestiona todas las tiendas con una clave).
 const SECRET = process.env.AKRONO_SECRET || "akrono-dev-secret-change-me";
 export const ADMIN_PASSWORD = process.env.AKRONO_ADMIN_PASSWORD || "akrono2026";
 const COOKIE = "akrono_admin";

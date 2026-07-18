@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useLocale } from "@/lib/locale-context";
+import { useStoreSlug } from "@/lib/store-context";
 import { money } from "@/lib/format";
 import type { Order, OrderStatus } from "@/lib/types";
 
@@ -18,6 +19,7 @@ const LABEL: Record<OrderStatus, { es: string; en: string }> = {
 
 export default function OrderTracker() {
   const l = useLocale();
+  const store = useStoreSlug();
   const [id, setId] = useState("");
   const [order, setOrder] = useState<Order | null>(null);
   const [state, setState] = useState<"idle" | "loading" | "notfound">("idle");
@@ -28,7 +30,7 @@ export default function OrderTracker() {
     if (!q) return;
     setState("loading");
     setOrder(null);
-    const res = await fetch(`/api/orders/${encodeURIComponent(q)}`);
+    const res = await fetch(`/api/orders/${encodeURIComponent(q)}?store=${store}`);
     if (res.ok) {
       setOrder(await res.json());
       setState("idle");

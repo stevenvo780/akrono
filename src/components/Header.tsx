@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/StoreLink";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/lib/brand";
 import { useCart } from "@/lib/cart";
@@ -11,7 +11,7 @@ export default function Header() {
   const { count } = useCart();
   const l = useLocale();
   const path = usePathname();
-  if (path?.startsWith("/admin")) return null;
+  if (path?.includes("/admin")) return null;
   return (
     <header className="sticky top-0 z-40 bg-[var(--cream)]/90 backdrop-blur border-b border-[var(--line)]">
       <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between gap-4">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocale } from "@/lib/locale-context";
+import { useStore } from "@/lib/store-context";
 
 interface Step {
   id: number;
@@ -14,6 +15,7 @@ interface Step {
 
 export default function ProcessSteps() {
   const locale = useLocale();
+  const store = useStore();
 
   const steps: Step[] = [
     {
@@ -33,8 +35,8 @@ export default function ProcessSteps() {
     {
       id: 2,
       iconColor: "var(--clay)",
-      titleEs: "akrono gestiona",
-      titleEn: "akrono manages",
+      titleEs: `${store.name} gestiona`,
+      titleEn: `${store.name} manages`,
       descEs: "Producción, control de calidad y empaque",
       descEn: "Production, quality control and packaging",
       icon: (color: string) => (

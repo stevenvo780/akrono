@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useStoreSlug } from "@/lib/store-context";
 import type { Product, ProductState, ProductionStatus } from "@/lib/types";
 
 const PS: { v: ProductionStatus; label: string }[] = [
@@ -12,6 +13,7 @@ const PS: { v: ProductionStatus; label: string }[] = [
 
 export default function ProductControl({ product, state }: { product: Product; state: ProductState }) {
   const router = useRouter();
+  const store = useStoreSlug();
   const [stock, setStock] = useState(state.stock);
   const [inProd, setInProd] = useState(state.in_production);
   const [status, setStatus] = useState<ProductionStatus>(state.production_status);
@@ -20,7 +22,7 @@ export default function ProductControl({ product, state }: { product: Product; s
 
   async function save(patch: Record<string, unknown>) {
     setSaving(true);
-    await fetch(`/api/products/${product.slug}`, {
+    await fetch(`/api/products/${product.slug}?store=${store}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(patch),

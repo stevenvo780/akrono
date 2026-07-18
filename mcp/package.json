@@ -1,0 +1,16 @@
+{
+  "name": "akrono-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Servidor MCP para plataforma e-commerce multi-tienda akrono",
+  "main": "server.mjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

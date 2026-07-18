@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useCart } from "@/lib/cart";
+import { useCart, type CartProduct } from "@/lib/cart";
 import { useLocale } from "@/lib/locale-context";
 import { t } from "@/lib/i18n";
 
-export default function AddToCart({ slug, disabled }: { slug: string; disabled?: boolean }) {
+export default function AddToCart({ product, disabled }: { product: CartProduct; disabled?: boolean }) {
   const { add } = useCart();
   const l = useLocale();
   const [done, setDone] = useState(false);
@@ -16,7 +16,7 @@ export default function AddToCart({ slug, disabled }: { slug: string; disabled?:
     <button
       className="btn-primary"
       onClick={() => {
-        add(slug, 1);
+        add(product, 1);
         setDone(true);
         setTimeout(() => setDone(false), 1400);
       }}

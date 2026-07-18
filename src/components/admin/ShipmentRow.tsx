@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useStoreSlug } from "@/lib/store-context";
 import type { Shipment, ShipmentStatus } from "@/lib/types";
 
 const STATUSES: { v: ShipmentStatus; label: string }[] = [
@@ -13,8 +14,9 @@ const STATUSES: { v: ShipmentStatus; label: string }[] = [
 
 export default function ShipmentRow({ shipment }: { shipment: Shipment }) {
   const router = useRouter();
+  const store = useStoreSlug();
   async function change(status: ShipmentStatus) {
-    await fetch(`/api/shipments/${shipment.id}`, {
+    await fetch(`/api/shipments/${shipment.id}?store=${store}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ status }),

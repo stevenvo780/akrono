@@ -1,0 +1,34 @@
+{
+  "slug": "akrono",
+  "name": "akrono",
+  "url": "https://akrono.vercel.app",
+  "locale_default": "es",
+  "tagline_es": "Artesanía colombiana hecha a mano, al mundo.",
+  "tagline_en": "Colombian handmade craft, to the world.",
+  "description_es": "Piezas artesanales hechas a mano en la Universidad de Antioquia. Venta nacional e internacional.",
+  "description_en": "Handmade artisan pieces from the University of Antioquia. National and international shipping.",
+  "keywords": ["artesanía", "Colombia", "hecho a mano", "handmade", "akrono"],
+  "logo": { "type": "wordmark", "text": "akrono", "orbit_dot": true, "isotype": "crescent" },
+  "colors": {
+    "primary": "#DA004A",
+    "primaryDark": "#B0003B",
+    "ink": "#152258",
+    "accent": "#EF9305",
+    "success": "#2496B0",
+    "cream": "#F6F7FB",
+    "line": "#E5E7F0"
+  },
+  "fonts": { "display": "MuseoModerno", "sans": "Poppins" },
+  "currencies": ["COP", "USD"],
+  "contact": {
+    "email": "hola@akrono.co",
+    "phone": "+57 300 000 0000",
+    "instagram": "akrono",
+    "city": "Medellín, Colombia"
+  },
+  "shipping": {
+    "free_national_over_cop": 250000,
+    "flat_national_cop": 15000,
+    "international_usd": 22
+  }
+}

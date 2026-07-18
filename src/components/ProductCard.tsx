@@ -1,19 +1,21 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/StoreLink";
 import type { Product } from "@/lib/types";
 import { useLocale } from "@/lib/locale-context";
+import { useStoreSlug } from "@/lib/store-context";
 import { pName } from "@/lib/i18n";
 import { price } from "@/lib/format";
 
 export default function ProductCard({ product }: { product: Product }) {
   const l = useLocale();
+  const store = useStoreSlug();
   return (
     <Link href={`/producto/${product.slug}`} className="card group block hover:shadow-lg transition-shadow">
       <div className="aspect-square overflow-hidden bg-[var(--cream)] relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={`/api/img/${product.slug}`}
+          src={`/api/img/${product.slug}?store=${store}`}
           alt={pName(product, l)}
           className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
         />
