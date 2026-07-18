@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# akrono: tests + db
+/test-results/
+/playwright-report/
+*.db
+*.db-*

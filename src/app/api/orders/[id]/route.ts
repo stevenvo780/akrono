@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { getOrder, updateOrderStatus, createShipment } from "@/lib/store";
+import { getOrder, updateOrderStatus, createShipment, updatePaymentStatus } from "@/lib/store";
 import { isAdmin } from "@/lib/auth";
-import type { OrderStatus } from "@/lib/types";
+import type { OrderStatus, PaymentStatus } from "@/lib/types";
 
 export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> }) {
   const { id } = await ctx.params;
@@ -14,6 +14,14 @@ export async function PATCH(req: Request, ctx: { params: Promise<{ id: string }>
   if (!(await isAdmin())) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const { id } = await ctx.params;
   const body = await req.json().catch(() => ({}));
+
+  // actualización de pago (independiente del estado del pedido)
+  if (body.payment_status) {
+    const upd = updatePaymentStatus(id, body.payment_status as PaymentStatus);
+    if (!upd) return NextResponse.json({ error: "not found" }, { status: 404 });
+    if (!body.status) return NextResponse.json(upd);
+  }
+
   const status = body.status as OrderStatus;
   const order = updateOrderStatus(id, status, body.note);
   if (!order) return NextResponse.json({ error: "not found" }, { status: 404 });

@@ -6,6 +6,7 @@ import { isAdmin } from "@/lib/auth";
 const schema = z.object({
   currency: z.enum(["COP", "USD"]),
   scope: z.enum(["nacional", "internacional"]),
+  payment_method: z.enum(["transferencia", "contraentrega", "tarjeta"]),
   items: z
     .array(
       z.object({
@@ -41,13 +42,14 @@ export async function POST(req: Request) {
   const order = createOrder({
     currency: d.currency,
     scope: d.scope,
+    payment_method: d.payment_method,
     items: d.items,
     subtotal: d.subtotal,
     shipping: d.shipping,
     total: d.total,
     customer: { ...d.customer, notes: d.customer.notes || undefined },
   });
-  return NextResponse.json({ id: order.id });
+  return NextResponse.json({ id: order.id, payment_status: order.payment_status });
 }
 
 export async function GET() {

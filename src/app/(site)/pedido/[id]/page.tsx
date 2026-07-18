@@ -35,10 +35,18 @@ export default async function OrderPage({ params }: { params: Promise<{ id: stri
       </div>
 
       <div className="card p-6 mt-10">
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-3">
           <span className="label mb-0">{t("status", l)}</span>
           <span className="text-sm font-bold text-[var(--clay)]">
             {(STATUS_LABEL[order.status]?.[l]) ?? order.status}
+          </span>
+        </div>
+        <div className="flex justify-between items-center mb-4 text-sm">
+          <span className="text-neutral-500">{l === "en" ? "Payment" : "Pago"}</span>
+          <span className="font-semibold" style={{ color: order.payment_status === "pagado" ? "var(--sage)" : "var(--ochre)" }}>
+            {order.payment_status === "pagado"
+              ? l === "en" ? "Paid" : "Pagado"
+              : l === "en" ? "Pending" : "Pendiente"}
           </span>
         </div>
         <div className="space-y-3 text-sm">

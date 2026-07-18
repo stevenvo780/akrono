@@ -59,6 +59,9 @@ export type OrderStatus =
 
 export type ShipmentScope = "nacional" | "internacional";
 
+export type PaymentMethod = "transferencia" | "contraentrega" | "tarjeta";
+export type PaymentStatus = "pendiente" | "pagado" | "reembolsado";
+
 export interface Customer {
   name: string;
   email: string;
@@ -80,6 +83,8 @@ export interface Order {
   shipping: number;
   total: number;
   customer: Customer;
+  payment_method: PaymentMethod;
+  payment_status: PaymentStatus;
   history: { at: string; status: OrderStatus; note?: string }[];
 }
 

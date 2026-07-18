@@ -13,6 +13,7 @@ export default function CheckoutPage() {
   const l = useLocale();
   const router = useRouter();
   const [scope, setScope] = useState<"nacional" | "internacional">(l === "en" ? "internacional" : "nacional");
+  const [payment, setPayment] = useState<"tarjeta" | "transferencia" | "contraentrega">("tarjeta");
   const [submitting, setSubmitting] = useState(false);
 
   const currency: "COP" | "USD" = scope === "internacional" ? "USD" : "COP";
@@ -43,6 +44,7 @@ export default function CheckoutPage() {
     const payload = {
       currency,
       scope,
+      payment_method: payment,
       items,
       subtotal,
       shipping,
@@ -102,6 +104,39 @@ export default function CheckoutPage() {
                 </button>
               ))}
             </div>
+          </div>
+
+          {/* método de pago */}
+          <div className="card p-6">
+            <p className="label mb-3">{l === "en" ? "Payment method" : "Método de pago"}</p>
+            <div className="grid sm:grid-cols-3 gap-3">
+              {([
+                ["tarjeta", l === "en" ? "Card" : "Tarjeta", "💳"],
+                ["transferencia", l === "en" ? "Bank transfer" : "Transferencia", "🏦"],
+                ["contraentrega", l === "en" ? "Cash on delivery" : "Contra entrega", "📦"],
+              ] as const).map(([v, lbl, icon]) => (
+                <button
+                  type="button"
+                  key={v}
+                  onClick={() => setPayment(v)}
+                  className={`p-3 rounded-lg border text-sm font-semibold flex flex-col items-center gap-1 ${
+                    payment === v ? "border-[var(--clay)] bg-[var(--cream)]" : "border-[var(--line)]"
+                  }`}
+                >
+                  <span className="text-lg">{icon}</span>
+                  {lbl}
+                </button>
+              ))}
+            </div>
+            <p className="text-xs text-neutral-400 mt-3">
+              {payment === "contraentrega"
+                ? l === "en"
+                  ? "Pay on delivery. Order is confirmed as pending payment."
+                  : "Pagas al recibir. El pedido queda como pago pendiente."
+                : l === "en"
+                  ? "Demo checkout — payment is simulated as approved."
+                  : "Checkout de demostración — el pago se simula como aprobado."}
+            </p>
           </div>
 
           <div className="card p-6">
