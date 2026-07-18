@@ -10,8 +10,11 @@
     "tienda": "node scripts/aplicar-tienda.mjs",
     "tienda:nueva": "node scripts/nueva-tienda.mjs",
     "lint": "eslint",
+    "test": "vitest run && playwright test",
+    "test:unit": "vitest run",
     "test:e2e": "playwright test",
-    "test:e2e:build": "next build && playwright test"
+    "test:e2e:build": "next build && playwright test",
+    "test:mcp": "bash scripts/test-mcp.sh"
   },
   "dependencies": {
     "next": "15.5.20",
@@ -28,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.20",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.10"
   }
 }

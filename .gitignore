@@ -45,3 +45,8 @@ next-env.d.ts
 /playwright-report/
 *.db
 *.db-*
+
+# nested node_modules (mcp package) + vitest db
+node_modules/
+/tmp/akrono-*.db
+coverage/

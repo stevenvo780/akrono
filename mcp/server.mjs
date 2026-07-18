@@ -1,5 +1,6 @@
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
 
 // Configuración desde variables de entorno
 const AKRONO_BASE_URL = process.env.AKRONO_BASE_URL || "http://localhost:3000";
@@ -51,15 +52,15 @@ async function api(method, path, body = null) {
 }
 
 // Crear instancia del servidor MCP
-const server = new Server({
-  name: "akrono-mcp",
-  version: "1.0.0",
-});
+const server = new Server(
+  { name: "akrono-mcp", version: "1.0.0" },
+  { capabilities: { tools: {} } },
+);
 
 /**
  * Herramienta: Listar todas las tiendas
  */
-server.setRequestHandler("tools/call", async (request) => {
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
 
   try {
@@ -283,7 +284,7 @@ server.setRequestHandler("tools/call", async (request) => {
 /**
  * Registrar las herramientas disponibles
  */
-server.setRequestHandler("tools/list", () => {
+server.setRequestHandler(ListToolsRequestSchema, () => {
   return {
     tools: [
       {

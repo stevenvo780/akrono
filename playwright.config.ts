@@ -5,6 +5,7 @@ const baseURL = `http://localhost:${PORT}`;
 
 export default defineConfig({
   testDir: "./tests",
+  testMatch: "**/*.spec.ts", // los *.test.ts son de vitest (unitarias)
   fullyParallel: false,
   workers: 1,
   retries: 0,
@@ -18,7 +19,7 @@ export default defineConfig({
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"], channel: "chrome" } }],
   webServer: {
-    command: `rm -f /tmp/akrono-e2e.db* && AKRONO_DB=/tmp/akrono-e2e.db AKRONO_API_KEY=test-key-123 NODE_ENV=production node_modules/.bin/next start -p ${PORT}`,
+    command: `rm -f /tmp/akrono-e2e.db* && AKRONO_DB=/tmp/akrono-e2e.db AKRONO_API_KEY=test-key-123 AKRONO_ADMIN_PASSWORD=akrono2026 NODE_ENV=production node_modules/.bin/next start -p ${PORT}`,
     url: baseURL,
     reuseExistingServer: false,
     timeout: 60000,
