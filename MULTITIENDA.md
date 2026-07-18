@@ -62,6 +62,28 @@ configura con `AKRONO_BASE_URL` y `AKRONO_API_KEY` y expone herramientas:
 Con esto se puede administrar toda la plataforma conversacionalmente: "creá una
 tienda para tal cliente con estos colores y subí estos productos".
 
+## Onboarding con IA (de contenido crudo a tienda)
+
+El flujo para montar una tienda de un cliente pequeño en minutos:
+
+1. El cliente pasa el **contenido crudo** (qué vende, en texto/lista libre).
+2. La IA genera la **marca** (nombre, paleta, tipografías, logo, textos/SEO) y el
+   **catálogo** bilingüe (categorías + productos con precios, historia, etc.).
+3. Se vuelca a un **bundle** `{config, catalog}` y se provisiona con:
+   ```bash
+   node scripts/provision-bundle.mjs bundle.json --base $URL --key $KEY [--slug mi-tienda]
+   ```
+   → crea la tienda + categorías + productos vía la API v1; queda **live al instante**.
+4. Validación integral (prueba función por función y reporta pass/fail):
+   ```bash
+   node scripts/validar-tienda.mjs mi-tienda --base $URL --key $KEY --pass $ADMIN
+   ```
+
+Ejemplo real ya incluido: **Cacao Nativo** (chocolatería artesanal, en
+`tiendas/cacao-nativo/`) fue generada por IA a partir de un brief crudo y validada
+21/21 (tienda, checkout con 2 métodos de pago, seguimiento, admin, envíos,
+inventario, analítica, API y aislamiento).
+
 ## Config de una tienda (StoreConfig)
 
 `name`, `tagline_es/en`, `description_es/en` (SEO), `keywords`,

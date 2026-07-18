@@ -10,6 +10,8 @@ import akronoConfig from "../../tiendas/akrono/config.json";
 import akronoCatalog from "../../tiendas/akrono/catalog.json";
 import lumbreConfig from "../../tiendas/lumbre/config.json";
 import lumbreCatalog from "../../tiendas/lumbre/catalog.json";
+import cacaoConfig from "../../tiendas/cacao-nativo/config.json";
+import cacaoCatalog from "../../tiendas/cacao-nativo/catalog.json";
 
 export type SeedCategory = {
   slug: string;
@@ -45,4 +47,5 @@ export type SeedStore = { config: StoreConfig; catalog: SeedCatalog };
 export const SEED_STORES: SeedStore[] = [
   { config: akronoConfig as StoreConfig, catalog: akronoCatalog as SeedCatalog },
   { config: lumbreConfig as StoreConfig, catalog: lumbreCatalog as SeedCatalog },
+  { config: cacaoConfig as StoreConfig, catalog: cacaoCatalog as SeedCatalog },
 ];

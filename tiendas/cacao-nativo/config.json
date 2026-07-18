@@ -1,0 +1,56 @@
+{
+  "slug": "cacao-nativo",
+  "name": "Cacao Nativo",
+  "url": "https://cacao-nativo.vercel.app",
+  "locale_default": "es",
+  "tagline_es": "Chocolate de origen, hecho a mano en Medellín",
+  "tagline_en": "Single-origin chocolate, handcrafted in Medellín",
+  "description_es": "Chocolate artesanal bean-to-bar, 100% cacao colombiano. Barras de origen único, bombones rellenos, chocolate de mesa y kits de cata premium. Hecho a mano en Medellín, sin conservantes y con empaque compostable.",
+  "description_en": "Bean-to-bar artisanal chocolate, 100% Colombian cacao. Single-origin bars, filled bonbons, drinking chocolate and premium tasting kits. Handmade in Medellín, no preservatives, compostable packaging.",
+  "keywords": [
+    "chocolate artesanal",
+    "bean-to-bar",
+    "cacao colombiano",
+    "origen único",
+    "chocolate premium",
+    "bombones rellenos",
+    "kits de cata",
+    "empaque compostable",
+    "sin conservantes",
+    "Medellín"
+  ],
+  "logo": {
+    "type": "wordmark",
+    "text": "Cacao Nativo",
+    "orbit_dot": true,
+    "isotype": "crescent"
+  },
+  "colors": {
+    "primary": "#5A3620",
+    "primaryDark": "#2C1A0E",
+    "ink": "#1C1814",
+    "accent": "#C68A3E",
+    "success": "#7A9B6E",
+    "cream": "#FBF8F4",
+    "line": "#E6DCD3"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "sans": "Poppins"
+  },
+  "currencies": [
+    "COP",
+    "USD"
+  ],
+  "contact": {
+    "email": "hola@cacaonativo.co",
+    "phone": "+57 301 234 5678",
+    "instagram": "cacaonativo",
+    "city": "Medellín"
+  },
+  "shipping": {
+    "free_national_over_cop": 180000,
+    "flat_national_cop": 15000,
+    "international_usd": 30
+  }
+}

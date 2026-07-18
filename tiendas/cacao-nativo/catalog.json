@@ -1,0 +1,515 @@
+{
+  "categories": [
+    {
+      "slug": "barras-origen-unico",
+      "name_es": "Barras de Origen Único",
+      "name_en": "Single-Origin Bars",
+      "description_es": "Barras de chocolate con cacao 100% colombiano de regiones específicas. Cada origen cuenta su propia historia de terroir.",
+      "description_en": "Single-origin chocolate bars with 100% Colombian cacao from specific regions. Each origin tells its own terroir story."
+    },
+    {
+      "slug": "bombones-rellenos",
+      "name_es": "Bombones Rellenos",
+      "name_en": "Filled Chocolates",
+      "description_es": "Bombones artesanales rellenos con ganaches y sabores colombianos únicos. Producción limitada, sin conservantes.",
+      "description_en": "Handcrafted filled chocolates with ganaches and unique Colombian flavors. Limited production, no preservatives."
+    },
+    {
+      "slug": "chocolate-de-mesa",
+      "name_es": "Chocolate de Mesa",
+      "name_en": "Table Chocolate",
+      "description_es": "Chocolate puro en polvo para preparar bebida. Tradicional y con panela, listos para disfrute inmediato.",
+      "description_en": "Pure powdered chocolate for drinking preparation. Traditional and with panela, ready for immediate enjoyment."
+    },
+    {
+      "slug": "nibs-cacao",
+      "name_es": "Nibs de Cacao",
+      "name_en": "Cacao Nibs",
+      "description_es": "Fragmentos puros de cacao fermentado y tostado. Snacks saludables, ideales para múltiples usos.",
+      "description_en": "Pure fragments of fermented and roasted cacao. Healthy snacks, ideal for multiple uses."
+    },
+    {
+      "slug": "kits-regalo",
+      "name_es": "Kits de Regalo",
+      "name_en": "Gift Kits",
+      "description_es": "Cajas curadas de chocolates premium con accesorios, guías de cata y packaging compostable.",
+      "description_en": "Curated boxes of premium chocolates with accessories, tasting guides, and compostable packaging."
+    }
+  ],
+  "products": [
+    {
+      "slug": "barra-tumaco-70",
+      "name_es": "Barra Tumaco 70%",
+      "name_en": "Tumaco Bar 70%",
+      "category": "barras-origen-unico",
+      "description_es": "Chocolate de origen Tumaco, 70% cacao. Notas frutales y ligeramente florales que reflejan la costa Pacífica.",
+      "description_en": "Tumaco origin chocolate, 70% cacao. Fruity and slightly floral notes reflecting the Pacific coast.",
+      "story_es": "Elaborado con cacao de los árboles más antiguos del Pacífico colombiano. Esta barra refleja la tradición chocolatera de Tumaco, región con vocación cacao desde generaciones. Cada mordisco cuenta la historia del terroir tropical.",
+      "story_en": "Made with cacao from the oldest trees of the Colombian Pacific. This bar reflects Tumaco's chocolate-making tradition, a cacao region for generations. Every bite tells the story of tropical terroir.",
+      "price_cop": 28000,
+      "price_usd": 7,
+      "stock": 25,
+      "production_time_days": 4,
+      "materials_es": [
+        "cacao 100% colombiano",
+        "azúcar de caña",
+        "manteca de cacao"
+      ],
+      "materials_en": [
+        "100% Colombian cacao",
+        "cane sugar",
+        "cacao butter"
+      ],
+      "weight_grams": 90,
+      "featured": true
+    },
+    {
+      "slug": "barra-sierra-nevada-65",
+      "name_es": "Barra Sierra Nevada 65%",
+      "name_en": "Sierra Nevada Bar 65%",
+      "category": "barras-origen-unico",
+      "description_es": "Chocolate de la Sierra Nevada, 65% cacao. Equilibrio perfecto entre acidez aromática y dulzura natural.",
+      "description_en": "Sierra Nevada chocolate, 65% cacao. Perfect balance between aromatic acidity and natural sweetness.",
+      "story_es": "Procedente de las laderas de la Sierra Nevada a altitud óptima, este cacao desarrolla perfiles complejos. La barra es suave al paladar y cierra con un final persistente que recuerda a frutos rojos silvestres.",
+      "story_en": "From Sierra Nevada slopes at optimal altitude, this cacao develops complex profiles. Smooth on the palate with a persistent finish reminiscent of wild red fruits.",
+      "price_cop": 26000,
+      "price_usd": 6.5,
+      "stock": 30,
+      "production_time_days": 4,
+      "materials_es": [
+        "cacao 100% colombiano",
+        "azúcar de caña",
+        "manteca de cacao"
+      ],
+      "materials_en": [
+        "100% Colombian cacao",
+        "cane sugar",
+        "cacao butter"
+      ],
+      "weight_grams": 85,
+      "featured": false
+    },
+    {
+      "slug": "barra-arauca-80",
+      "name_es": "Barra Arauca 80% Amargo",
+      "name_en": "Arauca Bar 80% Dark",
+      "category": "barras-origen-unico",
+      "description_es": "Chocolate amargo de Arauca, 80% cacao puro. Intenso y sofisticado, para paladares exigentes.",
+      "description_en": "Dark chocolate from Arauca, 80% pure cacao. Intense and sophisticated, for discerning palates.",
+      "story_es": "Arauca es la región de mayor altitud, produciendo cacao con perfil robusto y profundo. Esta barra de 80% es la expresión pura del amargo noble, con toques de cacao silvestre y madera tostada.",
+      "story_en": "Arauca is the highest altitude region, producing robust and deep-profile cacao. This 80% bar is pure noble bitterness, with hints of wild cacao and toasted wood.",
+      "price_cop": 30000,
+      "price_usd": 7.5,
+      "stock": 20,
+      "production_time_days": 4,
+      "materials_es": [
+        "cacao 100% colombiano",
+        "azúcar de caña",
+        "manteca de cacao"
+      ],
+      "materials_en": [
+        "100% Colombian cacao",
+        "cane sugar",
+        "cacao butter"
+      ],
+      "weight_grams": 90,
+      "featured": true
+    },
+    {
+      "slug": "bombon-maracuya",
+      "name_es": "Bombón Maracuyá",
+      "name_en": "Passion Fruit Bonbon",
+      "category": "bombones-rellenos",
+      "description_es": "Bombón cubierto de chocolate 70% relleno de ganache suave de maracuyá colombiano fresco.",
+      "description_en": "Bonbon coated in 70% chocolate filled with silky passion fruit ganache.",
+      "story_es": "El maracuyá de los Andes colombianos se transforma en ganache sedosa que contrasta con la estructura del chocolate. Cada bombón es una explosión controlada de acidez tropical y dulzura.",
+      "story_en": "Colombian Andean passion fruit becomes silky ganache contrasting with chocolate structure. Each bonbon is a controlled explosion of tropical acidity and sweetness.",
+      "price_cop": 18000,
+      "price_usd": 4.5,
+      "stock": 35,
+      "production_time_days": 2,
+      "materials_es": [
+        "chocolate 70% cacao",
+        "maracuyá colombiano",
+        "crema",
+        "azúcar"
+      ],
+      "materials_en": [
+        "70% cacao chocolate",
+        "Colombian passion fruit",
+        "cream",
+        "sugar"
+      ],
+      "weight_grams": 120,
+      "featured": false
+    },
+    {
+      "slug": "bombon-cafe-antioquia",
+      "name_es": "Bombón Café de Antioquia",
+      "name_en": "Antioquia Coffee Bonbon",
+      "category": "bombones-rellenos",
+      "description_es": "Bombón con ganache de café supremo de Antioquia, cubierto en chocolate amargo 75%.",
+      "description_en": "Bonbon with Antioquia supreme coffee ganache, coated in 75% dark chocolate.",
+      "story_es": "Fusión de dos iconos colombianos: cacao y café de Antioquia. El relleno captura la complejidad del café de montaña con notas de chocolate que se entretejen naturalmente.",
+      "story_en": "Fusion of two Colombian icons: cacao and Antioquia coffee. Filling captures mountain coffee complexity with chocolate notes naturally interweaving.",
+      "price_cop": 18500,
+      "price_usd": 4.6,
+      "stock": 32,
+      "production_time_days": 2,
+      "materials_es": [
+        "chocolate 75% cacao",
+        "café colombiano",
+        "crema",
+        "azúcar"
+      ],
+      "materials_en": [
+        "75% cacao chocolate",
+        "Colombian coffee",
+        "cream",
+        "sugar"
+      ],
+      "weight_grams": 115,
+      "featured": false
+    },
+    {
+      "slug": "bombon-arequipe",
+      "name_es": "Bombón Arequipe",
+      "name_en": "Arequipe Bonbon",
+      "category": "bombones-rellenos",
+      "description_es": "Bombón de chocolate con relleno cremoso de arequipe artesanal, el dulce de leche tradicional colombiano.",
+      "description_en": "Chocolate bonbon with creamy handmade arequipe filling, traditional Colombian dulce de leche.",
+      "story_es": "Tradición colombiana en su versión más refinada. El arequipe artesanal, hecho lentamente, se casa con chocolate oscuro en una textura que derrite en la boca.",
+      "story_en": "Colombian tradition in its most refined version. Handmade arequipe, made slowly, pairs with dark chocolate in a melt-on-the-tongue texture.",
+      "price_cop": 17500,
+      "price_usd": 4.4,
+      "stock": 38,
+      "production_time_days": 3,
+      "materials_es": [
+        "chocolate 70% cacao",
+        "leche",
+        "azúcar",
+        "vainilla"
+      ],
+      "materials_en": [
+        "70% cacao chocolate",
+        "milk",
+        "sugar",
+        "vanilla"
+      ],
+      "weight_grams": 110,
+      "featured": false
+    },
+    {
+      "slug": "bombon-aji",
+      "name_es": "Bombón Ají",
+      "name_en": "Chili Bonbon",
+      "category": "bombones-rellenos",
+      "description_es": "Bombón de chocolate 80% con ganache de ají picante colombiano. Para paladares aventureros.",
+      "description_en": "80% chocolate bonbon with Colombian hot chili ganache. For adventurous palates.",
+      "story_es": "La bravura del ají llanero se encuentra con la sofisticación del cacao de montaña. Picar sutil que se revela al final, dejando una sensación cálida y memorable.",
+      "story_en": "Boldness of llano chili meets mountain cacao sophistication. Subtle heat revealed at the finish, leaving a warm and memorable sensation.",
+      "price_cop": 19500,
+      "price_usd": 4.9,
+      "stock": 18,
+      "production_time_days": 2,
+      "materials_es": [
+        "chocolate 80% cacao",
+        "ganache",
+        "ají colombiano",
+        "especias"
+      ],
+      "materials_en": [
+        "80% cacao chocolate",
+        "ganache",
+        "Colombian chili",
+        "spices"
+      ],
+      "weight_grams": 120,
+      "featured": true
+    },
+    {
+      "slug": "chocolate-mesa-tradicional",
+      "name_es": "Chocolate de Mesa Tradicional",
+      "name_en": "Traditional Table Chocolate",
+      "category": "chocolate-de-mesa",
+      "description_es": "Chocolate puro molido, preparación tradicional. Disolver en agua caliente o leche para una taza reconfortante.",
+      "description_en": "Pure ground chocolate, traditional preparation. Dissolve in hot water or milk for a comforting cup.",
+      "story_es": "Receta transmitida de generación en generación en Medellín. Sin aditivos, solo cacao molido fino y azúcar de caña, listo para preparar la bebida que acompaña desayunos y tardes colombianas.",
+      "story_en": "Recipe passed down through generations in Medellín. No additives, just finely ground cacao and cane sugar, ready for Colombian breakfasts and afternoons.",
+      "price_cop": 22000,
+      "price_usd": 5.5,
+      "stock": 40,
+      "production_time_days": 1,
+      "materials_es": [
+        "cacao 100% colombiano molido",
+        "azúcar de caña"
+      ],
+      "materials_en": [
+        "100% ground Colombian cacao",
+        "cane sugar"
+      ],
+      "weight_grams": 200,
+      "featured": false
+    },
+    {
+      "slug": "chocolate-mesa-panela",
+      "name_es": "Chocolate de Mesa con Panela",
+      "name_en": "Table Chocolate with Panela",
+      "category": "chocolate-de-mesa",
+      "description_es": "Mezcla de cacao puro y panela molida colombiana. Bebida dulce con toque de caramelo natural y sin refinación.",
+      "description_en": "Mix of pure cacao and Colombian ground panela. Sweet drink with natural caramel touch, unrefined.",
+      "story_es": "Variante especial que incorpora panela, azúcar integral de caña colombiana. Resultado: bebida con mayor cuerpo, más viscosa y con sabores profundos a caramelo tostado.",
+      "story_en": "Special variant incorporating panela, unrefined cane sugar from Colombia. Result: fuller-bodied, thicker drink with deep roasted caramel flavors.",
+      "price_cop": 24000,
+      "price_usd": 6,
+      "stock": 35,
+      "production_time_days": 1,
+      "materials_es": [
+        "cacao 100% colombiano",
+        "panela molida",
+        "azúcar moreno"
+      ],
+      "materials_en": [
+        "100% Colombian cacao",
+        "ground panela",
+        "brown sugar"
+      ],
+      "weight_grams": 220,
+      "featured": false
+    },
+    {
+      "slug": "nibs-cacao-puro",
+      "name_es": "Nibs de Cacao Puro",
+      "name_en": "Pure Cacao Nibs",
+      "category": "nibs-cacao",
+      "description_es": "Fragmentos de cacao fermentado y tostado, sin azúcar agregada. Snack saludable y crocante.",
+      "description_en": "Fragments of fermented and roasted cacao, no added sugar. Healthy and crispy snack.",
+      "story_es": "Los nibs son la forma más pura de disfrutar el cacao. Crujientes, ligeramente amargos y llenos de antioxidantes. Ideales para comer solos, en yogurt, batidos o granola.",
+      "story_en": "Nibs are the purest way to enjoy cacao. Crispy, slightly bitter, full of antioxidants. Perfect for eating alone, in yogurt, smoothies, or granola.",
+      "price_cop": 21000,
+      "price_usd": 5.25,
+      "stock": 25,
+      "production_time_days": 3,
+      "materials_es": [
+        "cacao 100% colombiano fermentado y tostado"
+      ],
+      "materials_en": [
+        "100% Colombian fermented and roasted cacao"
+      ],
+      "weight_grams": 150,
+      "featured": false
+    },
+    {
+      "slug": "nibs-cacao-almendras",
+      "name_es": "Nibs con Almendras",
+      "name_en": "Cacao Nibs with Almonds",
+      "category": "nibs-cacao",
+      "description_es": "Nibs de cacao mezclados con almendras tostadas. Snack energético, proteico y nutritivo.",
+      "description_en": "Cacao nibs mixed with roasted almonds. Energizing, protein-rich, nutritious snack.",
+      "story_es": "Combinación pensada para aportar proteína y energía sostenida. Nibs amargos contrastan con suavidad de almendra, creando snack balanceado que satisface en cualquier momento.",
+      "story_en": "Combination designed for protein and sustained energy. Bitter nibs contrast with almond smoothness, creating a balanced snack satisfying anytime.",
+      "price_cop": 25000,
+      "price_usd": 6.25,
+      "stock": 22,
+      "production_time_days": 2,
+      "materials_es": [
+        "nibs de cacao 100% colombiano",
+        "almendras tostadas"
+      ],
+      "materials_en": [
+        "100% Colombian cacao nibs",
+        "roasted almonds"
+      ],
+      "weight_grams": 180,
+      "featured": false
+    },
+    {
+      "slug": "kit-cata-iniciacion",
+      "name_es": "Kit Cata de Iniciación",
+      "name_en": "Tasting Kit for Beginners",
+      "category": "kits-regalo",
+      "description_es": "Kit perfecto para iniciarse en chocolate fino. Incluye 3 barras de origen, guía de cata bilingüe y cucharilla de degustación.",
+      "description_en": "Perfect kit to begin fine chocolate exploration. Includes 3 origin bars, bilingual tasting guide, and tasting spoon.",
+      "story_es": "Diseñado para educadores, regalistas y curiosos. Contiene las tres barras principales (Tumaco 70%, Sierra Nevada 65%, Arauca 80%) con guía que explica cómo degustar, reconocer perfiles aromáticos y disfrutar chocolate como bebida de culto.",
+      "story_en": "Designed for educators, gift-givers, and the curious. Contains the three main bars (Tumaco 70%, Sierra Nevada 65%, Arauca 80%) with guide explaining how to taste, recognize aromatic profiles, and enjoy chocolate as a cultured beverage.",
+      "price_cop": 80000,
+      "price_usd": 20,
+      "stock": 12,
+      "production_time_days": 3,
+      "materials_es": [
+        "chocolate de origen múltiple",
+        "papel reciclado",
+        "madera de caja sostenible",
+        "tinta de soja"
+      ],
+      "materials_en": [
+        "multiple origin chocolate",
+        "recycled paper",
+        "sustainable wood box",
+        "soy ink"
+      ],
+      "weight_grams": 350,
+      "featured": true
+    },
+    {
+      "slug": "kit-regalo-premium",
+      "name_es": "Kit Regalo Premium",
+      "name_en": "Premium Gift Kit",
+      "category": "kits-regalo",
+      "description_es": "Caja de lujo con 5 bombones surtidos, chocolate de mesa y nibs puro. Empaque compostable y librito de recetas.",
+      "description_en": "Luxury box with 5 assorted bonbons, table chocolate, and pure nibs. Compostable packaging and recipe booklet.",
+      "story_es": "Para sorpresas especiales. Incluye bombardas más solicitadas, chocolate de mesa, nibs puro, y librito con historias de cada ingrediente y recetas para preparar. Empaque listo para regalar, caja con cierre magnético.",
+      "story_en": "For special surprises. Includes most-requested bonbons, table chocolate, pure nibs, and booklet with ingredient stories and preparation recipes. Gift-ready packaging with magnetic closure.",
+      "price_cop": 95000,
+      "price_usd": 23.75,
+      "stock": 8,
+      "production_time_days": 5,
+      "materials_es": [
+        "chocolate premium variado",
+        "papel kraft compostable",
+        "tinta natural",
+        "cordel de algodón",
+        "caja con cierre magnético"
+      ],
+      "materials_en": [
+        "assorted premium chocolate",
+        "compostable kraft paper",
+        "natural ink",
+        "cotton twine",
+        "magnetic closure box"
+      ],
+      "weight_grams": 550,
+      "featured": false
+    },
+    {
+      "slug": "barra-arauca-70",
+      "name_es": "Barra Arauca 70%",
+      "name_en": "Arauca Bar 70%",
+      "category": "barras-origen-unico",
+      "description_es": "Chocolate de origen Arauca con 70% de cacao, destacando notas florales y de miel.",
+      "description_en": "Arauca single-origin chocolate with 70% cacao, featuring floral and honey notes.",
+      "story_es": "Cultivado en las fértiles llanuras de Arauca, este cacao es manejado por familias dedicadas a conservar la biodiversidad. Procesada artesanalmente en Medellín, esta barra es un homenaje al campo colombiano. Hecho a mano, sin conservantes y empaque compostable.",
+      "story_en": "Grown in the fertile plains of Arauca, this cocoa is managed by families dedicated to conserving biodiversity. Artisanally processed in Medellín, this bar is a tribute to the Colombian countryside. Handmade, preservative-free, in compostable packaging.",
+      "price_cop": 20000,
+      "price_usd": 5,
+      "stock": 30,
+      "production_time_days": 3,
+      "materials_es": [
+        "cacao 70% Arauca",
+        "azúcar de caña orgánica",
+        "manteca de cacao"
+      ],
+      "materials_en": [
+        "70% Arauca cocoa",
+        "organic cane sugar",
+        "cocoa butter"
+      ],
+      "weight_grams": 90,
+      "featured": true
+    },
+    {
+      "slug": "barra-sierra-nevada-85",
+      "name_es": "Barra Sierra Nevada 85%",
+      "name_en": "Sierra Nevada Bar 85%",
+      "category": "barras-origen-unico",
+      "description_es": "Intenso chocolate 85% de la Sierra Nevada con notas a nuez tostada y madera.",
+      "description_en": "Intense 85% Sierra Nevada chocolate with toasted nut and wood notes.",
+      "story_es": "Originario de la montaña costera más alta del mundo, este cacao crece bajo la sombra del bosque tropical. Una experiencia intensa para los verdaderos amantes del chocolate negro. Nuestro proceso bean-to-bar garantiza su pureza natural.",
+      "story_en": "Originating from the world's highest coastal mountain, this cocoa grows under the shade of the tropical forest. An intense experience for true dark chocolate lovers. Our bean-to-bar process guarantees its natural purity.",
+      "price_cop": 22000,
+      "price_usd": 5.5,
+      "stock": 20,
+      "production_time_days": 3,
+      "materials_es": [
+        "cacao 85% Sierra Nevada",
+        "azúcar de caña orgánica",
+        "manteca de cacao"
+      ],
+      "materials_en": [
+        "85% Sierra Nevada cocoa",
+        "organic cane sugar",
+        "cocoa butter"
+      ],
+      "weight_grams": 90,
+      "featured": false
+    },
+    {
+      "slug": "barra-antioquia-cafe",
+      "name_es": "Barra Antioquia con Café",
+      "name_en": "Antioquia Bar with Coffee",
+      "category": "barras-origen-unico",
+      "description_es": "Combinación perfecta de cacao antioqueño al 65% y café especial tostado.",
+      "description_en": "Perfect combination of 65% Antioquia cocoa and specialty roasted coffee.",
+      "story_es": "Dos de los tesoros más grandes de Colombia se unen. Cultivados en las montañas de Antioquia, el cacao y el café crean una sinfonía de sabores equilibrados. Producido a mano, honrando el legado de nuestras tierras.",
+      "story_en": "Two of Colombia's greatest treasures unite. Grown in the mountains of Antioquia, the cocoa and coffee create a symphony of balanced flavors. Handmade, honoring the legacy of our lands.",
+      "price_cop": 24000,
+      "price_usd": 6,
+      "stock": 25,
+      "production_time_days": 4,
+      "materials_es": [
+        "cacao 65% Antioquia",
+        "granos de café de especialidad",
+        "azúcar de caña",
+        "manteca de cacao"
+      ],
+      "materials_en": [
+        "65% Antioquia cocoa",
+        "specialty coffee beans",
+        "cane sugar",
+        "cocoa butter"
+      ],
+      "weight_grams": 90,
+      "featured": false
+    },
+    {
+      "slug": "bolas-chocolate-mesa",
+      "name_es": "Bolas de Chocolate de Mesa Tradicional",
+      "name_en": "Traditional Hot Chocolate Balls",
+      "category": "chocolate-de-mesa",
+      "description_es": "Auténtico chocolate colombiano para batir, 100% cacao moldeado a mano en esferas.",
+      "description_en": "Authentic Colombian drinking chocolate to froth, 100% cocoa hand-molded into spheres.",
+      "story_es": "El corazón de la tradición colombiana. Estas bolas de cacao puro están pensadas para derretirse en leche o agua caliente, espumadas con un molinillo tradicional. Sin azúcar, para que endulces a tu gusto.",
+      "story_en": "The heart of Colombian tradition. These pure cocoa balls are designed to melt in milk or hot water, frothed with a traditional 'molinillo'. Sugar-free, so you can sweeten to your liking.",
+      "price_cop": 25000,
+      "price_usd": 6.25,
+      "stock": 40,
+      "production_time_days": 2,
+      "materials_es": [
+        "cacao 100% puro y tostado"
+      ],
+      "materials_en": [
+        "100% pure roasted cocoa"
+      ],
+      "weight_grams": 250,
+      "featured": true
+    },
+    {
+      "slug": "chocolate-mesa-especias",
+      "name_es": "Chocolate de Mesa con Especias y Panela",
+      "name_en": "Spiced Hot Chocolate with Panela",
+      "category": "chocolate-de-mesa",
+      "description_es": "Mezcla reconfortante de cacao, panela orgánica, canela y clavo de olor.",
+      "description_en": "Comforting blend of cocoa, organic panela, cinnamon, and cloves.",
+      "story_es": "La receta de las abuelas colombianas empacada para disfrutar. Usamos panela de trapiche para endulzar naturalmente, aportando un rico sabor a caramelo que se mezcla maravillosamente con especias cálidas.",
+      "story_en": "The recipe of Colombian grandmothers packaged for enjoyment. We use artisanal panela to sweeten naturally, providing a rich caramel flavor that blends beautifully with warm spices.",
+      "price_cop": 28000,
+      "price_usd": 7,
+      "stock": 30,
+      "production_time_days": 3,
+      "materials_es": [
+        "cacao puro",
+        "panela orgánica",
+        "canela",
+        "clavo de olor"
+      ],
+      "materials_en": [
+        "pure cocoa",
+        "organic panela",
+        "cinnamon",
+        "cloves"
+      ],
+      "weight_grams": 250,
+      "featured": false
+    }
+  ]
+}
