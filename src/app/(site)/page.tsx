@@ -3,6 +3,9 @@ import { categories, featuredProducts } from "@/lib/catalog";
 import { getLocale } from "@/lib/locale";
 import { t, cName, cDesc } from "@/lib/i18n";
 import ProductCard from "@/components/ProductCard";
+import Pattern from "@/components/Pattern";
+import ProcessSteps from "@/components/ProcessSteps";
+import TrustBadges from "@/components/TrustBadges";
 
 export default async function Home() {
   const l = await getLocale();
@@ -13,11 +16,12 @@ export default async function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
+          <Pattern variant="hero" className="absolute inset-0" opacity={0.08} />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(1000px 500px at 80% -10%, rgba(217,154,43,.22), transparent 60%), radial-gradient(800px 500px at 0% 20%, rgba(192,81,47,.16), transparent 55%)",
+                "radial-gradient(1000px 500px at 85% -10%, rgba(57,190,216,.18), transparent 60%), radial-gradient(800px 500px at 0% 15%, rgba(78,17,163,.12), transparent 55%)",
             }}
           />
         </div>
@@ -55,6 +59,11 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* TRUST */}
+      <section className="mx-auto max-w-6xl px-4 mt-16">
+        <TrustBadges />
+      </section>
+
       {/* CATEGORIES */}
       <section id="categorias" className="mx-auto max-w-6xl px-4 mt-20">
         <h2 className="font-display font-semibold text-2xl sm:text-3xl">{t("categories", l)}</h2>
@@ -74,9 +83,17 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* PROCESS */}
+      <section className="mt-20">
+        <ProcessSteps />
+      </section>
+
       {/* STORY */}
       <section id="historia" className="mx-auto max-w-6xl px-4 mt-20">
-        <div className="card p-8 sm:p-12 bg-[var(--ink)] text-[var(--cream)] border-none">
+        <div
+          className="p-8 sm:p-12 rounded-2xl text-[var(--cream)]"
+          style={{ background: "var(--ink)" }}
+        >
           <h2 className="font-display font-semibold text-2xl sm:text-3xl">{t("our_story", l)}</h2>
           <p className="mt-4 text-neutral-300 max-w-2xl leading-relaxed">{t("story_body", l)}</p>
           <div className="mt-8 grid grid-cols-3 gap-6 max-w-lg">

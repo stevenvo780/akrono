@@ -26,6 +26,9 @@ export default function Header() {
           <Link href="/#historia" className="hover:text-[var(--clay)]">
             {t("our_story", l)}
           </Link>
+          <Link href="/seguimiento" className="hover:text-[var(--clay)]">
+            {l === "en" ? "Track order" : "Seguimiento"}
+          </Link>
         </nav>
         <div className="flex items-center gap-4">
           <LocaleSwitcher />

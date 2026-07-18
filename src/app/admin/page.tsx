@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { stats, listOrders } from "@/lib/store";
 import { formatCOP, money } from "@/lib/format";
+import SalesChart from "@/components/admin/SalesChart";
 
 const STATUS_ES: Record<string, string> = {
   nuevo: "Nuevo",
@@ -41,6 +42,10 @@ export default async function AdminDashboard() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-8">
+        <SalesChart orders={listOrders()} />
       </div>
 
       <div className="card mt-8 overflow-hidden">

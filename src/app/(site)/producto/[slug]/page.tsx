@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getProduct, productsByCategory, getCategory } from "@/lib/catalog";
@@ -7,6 +8,24 @@ import { pName, pDesc, pStory, pMaterials, cName, t } from "@/lib/i18n";
 import { price } from "@/lib/format";
 import AddToCart from "@/components/AddToCart";
 import ProductCard from "@/components/ProductCard";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const p = getProduct(slug);
+  if (!p) return {};
+  const l = await getLocale();
+  const title = pName(p, l);
+  const description = pDesc(p, l);
+  return {
+    title,
+    description,
+    openGraph: { title, description, images: [`/api/img/${p.slug}`], type: "website" },
+  };
+}
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
